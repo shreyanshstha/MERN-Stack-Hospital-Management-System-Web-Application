@@ -8,29 +8,23 @@ const Biography = ({imageUrl}) => {
           <img src={imageUrl} alt="whoweare" />
         </div>
         <div className="banner">
-          <p>Biography</p>
-          <h3>Who We Are</h3>
+          <p>Our Mission</p>
+          <h3>Making Healthcare Accessible</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-            blanditiis sequi aperiam. Debitis fugiat harum ex maxime illo
-            consequatur mollitia voluptatem omnis nihil nesciunt beatae esse
-            ipsam, sapiente totam aspernatur porro ducimus aperiam nisi. Ex
-            magnam voluptatum consectetur reprehenderit fugiat recusandae aut
-            similique illum natus velit, praesentium nostrum nesciunt. Deleniti,
-            nesciunt laboriosam totam iusto!
+            Our mission is to make quality healthcare accessible to every individual, no matter where they are.
           </p>
-          <p>We are all in 2024!</p>
-          <p>We are working on a MERN STACK PROJECT.</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            assumenda exercitationem accusamus sit repellendus quo optio dolorum
-            corporis corrupti. Quas similique vel minima veniam tenetur
-            obcaecati atque magni suscipit laboriosam! Veniam vitae minus nihil
-            cupiditate natus provident. Ex illum quasi pariatur odit nisi
-            voluptas illo qui ipsum mollitia. Libero, assumenda?
+            With Good Health, you can connect with top consultants and experienced doctors from the comfort of your home.
           </p>
-          <p>Lorem ipsum dolor sit amet!</p>
-          <p>Coding is fun!</p>
+          <p>
+            We bring modern healthcare to your fingertips — from booking appointments, online video consultations, digital prescriptions, to managing your medical history securely.
+          </p>
+          <p>
+            At Good Health, we believe everyone deserves trusted, timely, and personalized medical care.
+          </p>
+          <p>
+            Your well-being is our priority, and we are committed to delivering a seamless, safe, and empowering healthcare experience across Nepal.
+          </p>
         </div>
       </div>
     </>

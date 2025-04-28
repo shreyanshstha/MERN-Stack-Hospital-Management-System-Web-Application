@@ -12,7 +12,7 @@ export const isAdminAuthenticated = catchAsyncErrors(
         new ErrorHandler("Dashboard User is not authenticated!", 400)
       );
     }
-    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const decoded = jwt.verify(token, "your_strong_secret_key_heresadas");
     req.user = await User.findById(decoded.id);
     if (req.user.role !== "Admin") {
       return next(
@@ -30,7 +30,7 @@ export const isPatientAuthenticated = catchAsyncErrors(
     if (!token) {
       return next(new ErrorHandler("User is not authenticated!", 400));
     }
-    const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const decoded = jwt.verify(token,"your_strong_secret_key_heresadas");
     req.user = await User.findById(decoded.id);
     if (req.user.role !== "Patient") {
       return next(

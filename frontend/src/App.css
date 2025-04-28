@@ -78,6 +78,9 @@ h6 {
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 40px;
 }
 .hero .banner {
   flex: 1;
@@ -89,11 +92,17 @@ h6 {
 .hero .banner h1 {
   letter-spacing: 2px;
   word-spacing: 5px;
-  font-size: 40px;
+  font-size: 48px;
+  color: #3939d9;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 .hero .banner p {
-  color: #111;
+  color: #444;
   letter-spacing: 2px;
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 600px;
 }
 .hero .banner span {
   position: absolute;
@@ -142,11 +151,18 @@ h6 {
 @media (max-width: 925px) {
   .hero {
     flex-direction: column;
+    margin: 20px;
   }
   @media (max-width: 700px) {
     .hero {
       padding-bottom: 40px;
     }
+  }
+  .hero .banner h1 {
+    font-size: 36px;
+  }
+  .hero .banner p {
+    font-size: 18px;
   }
 }
 .form-component {
@@ -257,6 +273,10 @@ h6 {
   gap: 50px;
   padding-top: 40px;
   padding-bottom: 60px;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 .biography .banner:first-child {
   flex: 1;
@@ -264,23 +284,39 @@ h6 {
   justify-content: center;
   align-items: center;
 }
+.biography .banner:first-child img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 .biography .banner:last-child {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
 }
 .biography .banner h3 {
   font-weight: 700;
   letter-spacing: 3px;
+  color: #3939d9;
+  margin-bottom: 10px;
 }
 .biography .banner p:first-child {
   font-size: 24px;
   letter-spacing: 2px;
+  color: #666;
+  text-transform: uppercase;
+}
+.biography .banner p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
 }
 @media (max-width: 925px) {
   .biography {
     flex-direction: column-reverse;
+    margin: 20px;
   }
 }
 .message-form {

@@ -12,10 +12,21 @@ import appointmentRouter from "./router/appointmentRouter.js";
 const app = express();
 config({ path: "./config.env" });
 
+// Define allowed origins
+const allowedOrigins = ["http://localhost:5173", "http://localhost:5174"];
+
+// Configure CORS with a dynamic origin
 app.use(
   cors({
-    origin: [process.env.FRONTEND_URL_ONE, process.env.FRONTEND_URL_TWO],
-    method: ["GET", "POST", "DELETE", "PUT"],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (e.g., mobile apps, Postman)
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    methods: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
 );
@@ -30,6 +41,7 @@ app.use(
     tempFileDir: "/tmp/",
   })
 );
+
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);

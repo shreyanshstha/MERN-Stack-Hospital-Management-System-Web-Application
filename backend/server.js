@@ -1,12 +1,16 @@
 import app from "./app.js";
 import cloudinary from "cloudinary";
 
+// Configure Cloudinary with hard-coded values
 cloudinary.v2.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: "duhqrzlzm", // Replace with your actual Cloudinary cloud name
+  api_key: "129148664723623", // Replace with your actual Cloudinary API key
+  api_secret: "Bms8vGvUX8qgXMuhL_d-WTdD1qQ", // Replace with your actual Cloudinary API secret
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server listening at port ${process.env.PORT}`);
+// Start the server
+const PORT = 5000; // You can also hard-code the port if needed
+
+app.listen(PORT, () => {
+  console.log(`Server listening at port ${PORT}`);
 });
